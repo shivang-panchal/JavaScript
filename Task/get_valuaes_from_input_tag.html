@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1 id="h1"></h1> -->
+    <input id="input">
+    <button onclick="demo()">Get Value</button>
+    <ul style="list-style: lower-roman;" id="ul"></ul>
+    <!-- <p id="p">I am p Tag</p> -->
+    <!-- <h3 id="h3"></h3> -->
+
+    <script>
+
+       // document.getElementById("h1").innerHTML = "Hello";
+
+        // document.getElementById("p").style.backgroundColor = "red";
+
+        function demo(){
+
+        var val1 = document.getElementById("input").value;
+        var li = document.createElement('li');
+        if(val1 == ""){
+
+            alert("plz enter the values")
+
+        }else{
+        li.innerHTML = val1;
+        document.getElementById("ul").appendChild(li);
+
+        document.getElementById("input").value="";
+
+        }
+    }
+    </script>
+</body>
+</html>

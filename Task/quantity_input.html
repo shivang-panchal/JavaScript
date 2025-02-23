@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+
+
+.main{
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    width: fit-content;
+    background-color: aqua;
+
+}
+
+</style>
+<body>
+    
+<br>
+<br>
+
+
+<div class="main">
+
+
+<button id="decrease" onclick="sub()">-</button>
+<input style="text-align: center; width:fit-content" id="val">
+<button id="increase" onclick="add()">+</button>
+
+
+</div>
+
+
+<script>
+
+  
+
+    val1 = document.getElementById("val").value = 0;
+
+function sub(){
+
+    val1--;
+  
+    if(val1>=0){
+
+       
+        
+        document.getElementById("val").value=val1;
+        
+        }
+        else if (val1<0){
+        
+        alert("Minimum value is 0");
+       // document.getElementById("val").value = 0;
+        val1++
+        
+        }
+        else{
+
+            alert("Enter right integer");
+        }
+
+
+}
+
+function add(){
+
+
+
+    val1 ++;
+    
+
+  
+    if(val1>=0){
+
+        
+  
+
+        document.getElementById("val").value=val1;
+        
+        }
+      
+    
+    
+    }
+
+
+
+</script>
+
+
+</body>
+</html>

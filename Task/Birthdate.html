@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    .form{
+
+        background-color: aqua;
+        border: 1px solid black;
+        width: fit-content;
+        text-align: center;
+        padding: 20px;
+
+    }
+
+    .res{
+
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+
+    <form class="form" onsubmit="prevent(event)">
+    <label>Select Birthdate:-</label>
+    <input id="date" type="date"><br><br>
+    <button id="btn">Calculate Age</button>
+    <div class="res">
+    <p>Your Age is :- </p>
+    <p id="result"></p>
+    </div>
+    </form>
+
+   <script>
+
+        function prevent(e){
+
+            e.preventDefault();
+        }
+
+   
+        var a = document.querySelector("#date");
+
+
+        btn.onclick = () =>{
+
+            if(a.value == ""){
+
+                alert("plz Select Your Date of Birth");
+            }
+            else {
+
+                
+              
+                const dob = new Date(a.value);
+                const dob_year = dob.getFullYear();
+                const current_date= new Date();
+                const current_year = current_date.getFullYear();
+                const age = current_year - dob_year;
+                document.getElementById("result").innerHTML= age;
+
+                  console.log("Input = ",a.value);
+                  console.log("dob = ",dob);
+                  console.log("Dob_year",dob_year);
+                  console.log("Current Year = ",current_year);
+                  console.log(age);
+            }
+
+        }
+
+
+    
+
+   </script>
+    
+</body>
+</html>

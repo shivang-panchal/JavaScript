@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+p{
+
+background-color: aqua;
+width: fit-content;
+height: fit-content;
+padding: 20px;
+border: 1px solid black;
+
+}
+
+</style>
+<body>
+    <script>
+
+        
+        var time = setInterval(xy,1000);
+
+       function xy(){
+
+        var dt = new Date();
+        
+        var a= dt.toLocaleTimeString();
+
+        document.getElementById("clock").innerHTML = a;
+
+      //document.write(a);
+        
+       }
+   
+    </script>
+
+    <p id="clock"></p>
+
+</body>
+</html>
